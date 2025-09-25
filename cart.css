@@ -202,10 +202,16 @@ span {
     }
     .cart-container {
         width: 95%;
+        padding: 0;
+        margin: 0;
     }
     .navbar a {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-top: 1rem;
+    }
+
+    .header {
+        height: 80px;
     }
 
     .logo {
@@ -215,8 +221,9 @@ span {
     .cart-items {
         grid-template-columns: auto;
         margin: 1rem;
+        margin-bottom: 2rem;
         border: 2px solid #ccc;
-        padding: 10px;
+        padding: 0px;
     }
 
     .item-name {
@@ -234,8 +241,9 @@ span {
     }
 
     .cart-img {
-        width: 283px;
-        height: 260px;
+        width: 100%;
+        border-radius: 0;
+        height: 320px;
     }
 
     .decrease-btn, .increase-btn {
@@ -245,6 +253,6 @@ span {
     }
 
     .controls-div {
-        line-height: 1;
+        line-height: 0;
     }
 }
