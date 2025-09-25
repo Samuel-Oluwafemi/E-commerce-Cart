@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f1f1f1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    position: sticky;
+    color: black;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 1.5rem 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    cursor: default;
+    animation: slideRight 1.5s ease forwards;
+    cursor: pointer;
+}
+
+span {
+    font-size: 40px;
+    color: blue;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif ;
+    color: black;
+    text-decoration: none;
+    margin-left: 2rem;
+    cursor: pointer;
+    animation: slideTop 1.5s ease forwards;
+    transition: .3s;
+}
+
+.link-name {
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 1.2rem;
+}
+
+.cart-container {
+    max-width: 800px;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.1;
+    animation: slideTop 1.5s ease forwards;
+    animation-delay: calc(.2s * var(--i)) ;
+}
+
+.cart-container h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cart-items {
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+    border: 1px solid #ccc;
+    margin: 2rem;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cart-img {
+    width: 180px;
+    height: 170px;
+    border-radius: 10px;
+}
+
+.item-name {
+    line-height: 7;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.item-price {
+    line-height: 8;
+    font-size: 18px;
+    color: #555;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.decrease-btn {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #ddd;
+    min-width: 20px;
+    height: 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.decrease-btn:hover {
+    opacity: 0.8;
+}
+
+.increase-btn {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #ddd;
+    min-width: 20px;
+    height: 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.increase-btn:hover {
+    opacity: 0.8;
+}
+
+.quantity-span {
+    margin: 20px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: middle;
+    display: inline-block;
+    min-width: 20px;
+    text-align: center;
+    color: #333;
+}
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;   
+    }
+} 
+/* KEYFRAMES ANIMATION */
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;   
+    }
+} 
+
+.navbar a:hover {
+    color: blue;
+}
+
+@media(max-width: 768px) {
+    html,body {
+        overflow-x: hidden;
+    }
+    .cart-container {
+        width: 95%;
+    }
+    .navbar a {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    .cart-items {
+        grid-template-columns: auto;
+        margin: 1rem;
+        border: 2px solid #ccc;
+        padding: 10px;
+    }
+
+    .item-name {
+        line-height: 4;
+        font-size: 27px;
+    }
+
+    .item-price {
+        line-height: 2;
+        font-size: 25px;
+    }
+
+    .quantity-span {
+        font-size: 22px;
+    }
+
+    .cart-img {
+        width: 283px;
+        height: 260px;
+    }
+
+    .decrease-btn, .increase-btn {
+        min-width: 30px;
+        height: 30px;
+        font-size: 22px;
+    }
+
+    .controls-div {
+        line-height: 1;
+    }
+}
