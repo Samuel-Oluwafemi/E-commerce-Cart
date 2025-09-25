@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxmart Shopping Cart</title>
+    <link rel="stylesheet" href="./main.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="logo">
+                <i class='bxr bxs-shopping-bag' 
+                style="color: blue;">
+                </i>Flux<span>mart.</span></a>
+            
+             <nav class="navbar">
+                    <a href="#" style="--i:1;">
+                        <i class='bxr bx-heart'>
+                                <p class="link-name">Saved</p>
+                        </i> 
+                    </a>
+                    <a href="./cart.html" style="--i:2;">
+                        <i class='bxr bx-cart'>
+                            <p class="link-name">My cart 
+                                (<span id="cart-count">0</span>)</p>
+                        </i> 
+                    </a>
+             </nav>
+        </header>
+        <div class="main">
+            <div class="main-img">
+                <img src="./images/THE BRINK x AI AUTOMATION – TURN TIME INTO PRODUCTIVITY.jpg" alt="">
+            </div>
+            <div class="main-text">
+                <h2><span class="bold">Grab Upto 50% Off</span> On <br>Selected Products</h2>
+            </div>
+            <button class="main-btn" style="--i:1;">
+                Shop Now
+            </button>
+        </div>
+                <!---Recent Items--->
+        <div class="grid-container" style="--i:2;">
+            <div class="content">
+                <div class="content-img">
+                    <img src="./images/sweater (5).jpg" alt="">
+                    <div class="content-text">
+                        <p>Just Boy Hoodie</p>
+                        <p class="rating">
+                            &Star; <b>4.5  (134 reviews)</b></p>
+                            <p class="price">#32,000</p>
+
+                            <!-- Add to cart btn + name, price -->
+                            <div class="action-btn">
+                            <!-- Cart btn -->
+                            <button id="cart-btn"
+                            data-name="Just Boy Hoodie" data-price="32,000" 
+                            data-img="./images/sweater (5).jpg" data-id="10">
+                                <i class='bxr bx-shopping-bag'></i> 
+                                Add to cart
+                            </button>
+                            </div>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="content">
+                <div class="content-img">
+                    <img src="./images/joggers (1).jpg" alt="">
+                    <div class="content-text">
+                        <p>LV Joggers</p>
+                        <p class="rating">
+                            &Star;&Star; <b>4.9  (160 reviews)</b></p>
+                            <p class="price">#40,000</p>
+
+                            <!-- Add to cart btn + name, price -->
+                            <div class="action-btn">
+                            <!-- Cart btn -->
+                            <button id="cart-btn"
+                            data-name="Louis Vuitton Joggers" data-price="40,000"
+                            data-img="./images/joggers (1).jpg" data-id="11">
+                                    <i class='bxr bx-shopping-bag'></i> 
+                                    Add to cart
+                                </button>
+                            </div>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="content">
+                <div class="content-img">
+                    <img src="./images/shoes (3).jpg" alt="">
+                    <div class="content-text">
+                        <p>Clanks Brown Shoe</p>
+                        <p class="rating">
+                            &Star;&Star;&Star; <b>5.0  (220 reviews)</b></p>
+                            <p class="price">#60,000</p>
+                            <!-- Add to cart btn + name, price -->
+                            <div class="action-btn">
+                                    <!-- Cart btn -->
+                                    <button id="cart-btn"
+                                    data-name="Clanks Brown Shoe" data-price="60,000"
+                            data-img="./images/shoes (3).jpg" data-id="12">
+                                    <i class='bxr bx-shopping-bag'></i> 
+                                    Add to cart
+                                </button>
+                            </div>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="content">
+                <div class="content-img">
+                    <img src="./images/shoes (6).jpg" alt="">
+                    <div class="content-text">
+                        <p>Clanks Black Shoe</p>
+                        <p class="rating">
+                            &Star;&Star;&Star; <b>5.0  (194 reviews)</b></p>
+                            <p class="price">#62,000</p>
+                            <!-- Add to cart btn + name, price -->
+                            <div class="action-btn">
+                            <!-- Cart btn -->
+                            <button id="cart-btn"
+                            data-name="Clanks Black Shoe" data-price="62,000"
+                            data-img="./images/shoes (6).jpg" 
+                            data-id="13">
+                                    <i class='bxr bx-shopping-bag'></i> 
+                                    Add to cart
+                                </button>
+                            </div>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="content">
+                <div class="content-img">
+                    <img src="./images/slides (8).jpg" alt="">
+                    <div class="content-text">
+                        <p>Zara Slides</p>
+                        <p class="rating">
+                            &Star;&Star; <b>4.6  (140 reviews)</b></p>
+                            <p class="price">#30,000</p>
+                            <!-- Add to cart btn + name, price -->
+                            <div class="action-btn">
+                            <!-- Cart btn -->
+                            <button id="cart-btn"
+                            data-name="Zara Slides" data-price="30,000"
+                            data-img="./images/slides (8).jpg" data-id="14">
+                                    <i class='bxr bx-shopping-bag'></i> 
+                                    Add to cart
+                                </button>
+                            </div>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="content">
+                <div class="content-img">
+                    <img src="./images/sweater (1).jpg" alt="">
+                    <div class="content-text">
+                        <p>Gucci Hoodie</p>
+                        <p class="rating">
+                            &Star;&Star; <b>4.8  (151 reviews)</b></p>
+                            <p class="price">#50,000</p>
+                            <!-- Add to cart btn + name, price -->
+                            <div class="action-btn">
+                            <!-- Cart btn -->
+                            <button id="cart-btn"
+                            data-name="Gucci Hoodie" data-price="50,000"
+                            data-img="./images/sweater (1).jpg" data-id="15">
+                                    <i class='bxr bx-shopping-bag'></i> 
+                                    Add to cart
+                                </button>
+                            </div>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="content">
+                <div class="content-img">
+                    <img src="./images/sweater (6).jpg" alt="">
+                    <div class="content-text">
+                        <p>Balman-P Hoodie</p>
+                        <p class="rating">
+                            &Star; <b>4.7  (122 reviews)</b></p>
+                            <p class="price">#40,000</p>
+                            <!-- Add to cart btn + name, price -->
+                            <div class="action-btn">
+                            <!-- Cart btn -->
+                            <button id="cart-btn"
+                            data-name="Balman Paris" data-price="40,000"
+                            data-img="./images/sweater (6).jpg" data-id="16">
+                                    <i class='bxr bx-shopping-bag'></i> 
+                                    Add to cart
+                                </button>
+                            </div>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="content">
+                <div class="content-img">
+                    <img src="./images/tops (7).jpg" alt="">
+                    <div class="content-text">
+                        <p>Burberry T-Shirt</p>
+                        <p class="rating">
+                            &Star; <b>4.5  (134 reviews)</b></p>
+                            <p class="price">#25,000</p>
+                            <!-- Add to cart btn + name, price -->
+                            <div class="action-btn">
+                                <!-- Cart btn -->
+                                <button id="cart-btn"
+                                data-name="Burberry T-Shirt" data-price="25,000"
+                            data-img="./images/tops (7).jpg" data-id="17">
+                                    <i class='bxr bx-shopping-bag'></i> 
+                                    Add to cart
+                                </button>
+                            </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <footer class="footer"></footer>
+</body>
+</html>
