@@ -5,7 +5,11 @@ cart.forEach(item => {
     count += item.quantity;
 })
 cartCount.textContent = count;
-
+// Update cart count
+function updateCartCount() { 
+    const total = cart.reduce((sum, item) => sum +item.quantity, 0);
+    cartCount.textContent = total;
+}
 const cartContainer = document.querySelector(".cart-container");
 
 function renderCart(cart) {
@@ -75,11 +79,12 @@ function renderCart(cart) {
                 localStorage.setItem('cart', JSON.stringify(cart));
                 cartContainer.innerHTML = "";
                 renderCart(cart);   
+                updateCartCount();
             })
             // Decrease quantity
-            decreaseBtn.addEventListener('click', () => {
+            decreaseBtn.addEventListener('click', (e) => {
                 // Target the specific id item
-                const id = decreaseBtn.dataset.id;
+                const id = e.target.dataset.id;
                 const product = cart.find(item => item.id === id);
                 // Decrease quantity only if greater than 1
                 if(product && product.quantity > 1) {
@@ -87,6 +92,7 @@ function renderCart(cart) {
                 }
                 localStorage.setItem('cart', JSON.stringify(cart));
                 renderCart(cart);
+                updateCartCount();
             })
         })
     }
