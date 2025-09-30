@@ -17,6 +17,9 @@ function renderCart(cart) {
 
     if(cart.length === 0) {
         cartContainer.textContent = "Your cart is empty";
+        cartContainer.style.textAlign = "center";
+        cartContainer.style.padding = "30px";
+        cartContainer.style.fontSize = "20px";
         return;
     }   
         cart.forEach(item => {
@@ -57,6 +60,11 @@ function renderCart(cart) {
             // Attach data-id to buttons
             increaseBtn.dataset.id = item.id;
 
+            const removeBtn = document.createElement("button");
+            removeBtn.innerHTML = "&times;";
+            removeBtn.classList.add("remove-btn");
+            removeBtn.dataset.id = item.id;
+            
             controlsDiv.appendChild(decreaseBtn);
             controlsDiv.appendChild(quantitySpan);
             controlsDiv.appendChild(increaseBtn);
@@ -65,9 +73,23 @@ function renderCart(cart) {
             cartItem.appendChild(itemName);
             cartItem.appendChild(item_price);
             cartItem.appendChild(controlsDiv);
+            cartItem.appendChild(removeBtn);
 
             cartContainer.appendChild(cartItem);
             
+            // Remove item
+            removeBtn.addEventListener("click", (e) => {
+                const id = e.target.dataset.id;
+                const remove = cart.findIndex(item => item.id === id);
+                if(remove !== -1) {
+                    cart.splice(remove, 1);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    cartContainer.innerHTML = "";
+                    renderCart(cart);
+                    updateCartCount();
+                }         
+            })
+
             // Increase quantity
             increaseBtn.addEventListener('click', (e) => {
                 // Target the specific id item
