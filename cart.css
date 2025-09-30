@@ -94,7 +94,7 @@ span {
 
 .cart-items {
     display: grid;
-    grid-template-columns: auto auto auto auto; 
+    grid-template-columns: auto auto auto auto auto; 
     border: 1px solid #555;
     margin: 2rem;
     padding: 20px;
@@ -153,6 +153,25 @@ span {
 
 .increase-btn:hover {
     opacity: 0.8;
+}
+
+.remove-btn {
+    text-align: right;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: transparent;
+    min-width: 20px;
+    height: 20px;
+    border: none;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+.remove-btn:hover {
+    color: #555;
+    transition: .3s;
 }
 
 .quantity-span {
