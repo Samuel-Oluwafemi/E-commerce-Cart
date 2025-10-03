@@ -1,5 +1,12 @@
 const cartCount = document.getElementById("cart-count");
+const mainBtn = document.querySelector(".main-btn");
 const cartBtn = document.querySelectorAll("#cart-btn");
+const closeBtn = document.getElementById("close-btn");
+
+//Retrieve modal from main btn
+mainBtn.addEventListener('click', () => {
+    document.getElementById("modal").style.display = "block";
+})
 // Store clicked products in a cart array
 let cart = [];
 // Initialize cart count
