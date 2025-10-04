@@ -1,12 +1,27 @@
 const cartCount = document.getElementById("cart-count");
 const mainBtn = document.querySelector(".main-btn");
 const cartBtn = document.querySelectorAll("#cart-btn");
+const content = document.querySelector(".content");
+const gridContainer = document.querySelector(".grid-container");
 const closeBtn = document.getElementById("close-btn");
+const modal = document.getElementById("modal");
 
 //Retrieve modal from main btn
 mainBtn.addEventListener('click', () => {
-    document.getElementById("modal").style.display = "block";
+    modal.style.display = "block";
+    gridContainer.style.display = "none";
+    document.querySelector(".header").style.display = "none";
+    document.querySelector(".footer").style.display = "none";
 })
+
+//Close modal 
+closeBtn.addEventListener('click', () => {
+    modal.style.display = "none";
+    gridContainer.style.display = "grid";
+    document.querySelector(".header").style.display = "flex";
+    document.querySelector(".footer").style.display = "block";
+})
+
 // Store clicked products in a cart array
 let cart = [];
 // Initialize cart count
