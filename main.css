@@ -161,6 +161,7 @@ input[type="password"] {
     border: 1px solid #ccc;
     border-radius: 10px;
 }
+
 input[type="confirm password"] {
     width: 100%;
     padding: 10px;
@@ -389,11 +390,57 @@ b {
     font-weight: 500;
     font-family: sans-serif;
 }
+.main-footer {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+.top {
+    color: white;
+    text-decoration: none;
+}
 
 .footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
     background-color: #0098ec;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
     width: 100%;
-    height: 300px;
+    height: 350px;
+}
+
+.footer > footer {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.connt {
+    margin-top: 4rem;
+    line-height: 2;
+}
+
+.footer-link {
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+}
+
+.end-footer {
+    width: 100%;
+    background-color: #0098ec;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
 }
 
 @media(max-width: 768px) {
@@ -488,7 +535,6 @@ b {
         font-size: 16px;
     }
     
-    
     form {
         width: 100%;
         height: 100%;
@@ -548,12 +594,6 @@ b {
         height: 170px;
     }
 
-    .footer {
-        background: #0098ec;
-        height: 200px;
-        margin-top: 1rem;
-    }
-
     .rating {
         font-size: 16px;
     }
@@ -566,6 +606,39 @@ b {
         font-size: 14px;
     }
 
+    .footer {
+        font-size: 14px;
+        padding: 2px;
+        gap: 4px;
+        height: 230px;
+        margin-bottom: 0;
+    }
+    
+    .footer > footer {
+        margin-bottom: 0;
+        background-color: #0098ec;
+    }
+
+    .connt {
+        margin-top: 1rem;
+        line-height: 1.9;
+    }
+
+    .footer-link {
+        line-height: 2;
+        margin-bottom: 0.3rem;
+        text-decoration: underline;
+    }
+
+    .main-footer {
+        font-size: 12px;
+        padding: 10px;
+    }  
+
+    .end-footer {
+        font-size: 12px;
+        padding: 10px;
+    }
 }
 
 @media(max-width: 480px) {
@@ -618,8 +691,7 @@ b {
     
     label {
         font-size: 16px;
-    }
-    
+    } 
     
     form {
         width: 100%;
@@ -642,7 +714,6 @@ b {
     input[type="submit"] {
         font-size: 18px;
     }
-
 
     .header {
         height: 80px;
@@ -676,11 +747,6 @@ b {
     .content-img img {
         width: 163px;
         height: 170px;
-    }
-
-    .footer {
-        background: #0098ec;
-        height: 150px;
     }
 }
 
