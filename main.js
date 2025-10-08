@@ -12,14 +12,21 @@ mainBtn.addEventListener('click', () => {
     gridContainer.style.display = "none";
     document.querySelector(".header").style.display = "none";
     document.querySelector(".footer").style.display = "none";
+    document.querySelector(".main-footer").style.display = "none";
+    document.querySelector(".end-footer").style.display = "none";
+    document.querySelector(".copyright").style.display = "none";
+    document.querySelector(".update").style.display = "none";
 })
 
 //Close modal 
 closeBtn.addEventListener('click', () => {
     modal.style.display = "none";
     gridContainer.style.display = "grid";
+    document.querySelector(".update").style.display = "block";
     document.querySelector(".header").style.display = "flex";
-    document.querySelector(".footer").style.display = "block";
+    document.querySelector(".footer").style.display = "grid";
+    document.querySelector(".main-footer").style.display = "block";
+    document.querySelector(".end-footer").style.display = "block";
 })
 
 // Store clicked products in a cart array
